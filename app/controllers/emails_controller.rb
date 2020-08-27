@@ -4,7 +4,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.create(object: Faker::TvShows::BigBangTheory.character, body: Faker::TvShows::BigBangTheory.quote)
+    @email = Email.create(object: Faker::Movies::HitchhikersGuideToTheGalaxy.character, body: Faker::TvShows::RickAndMorty.quote)
 
       respond_to do |format|
       format.html {redirect_to root_path}

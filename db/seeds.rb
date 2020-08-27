@@ -26,8 +26,8 @@ puts "$" * 23
 puts "nous allons creer les emails"
 5.times do
   Email.create(
-    object: Faker::TvShows::BigBangTheory.character, 
-    body: Faker::TvShows::BigBangTheory.quote,
+    object: Faker::Movies::HitchhikersGuideToTheGalaxy.character, 
+    body: Faker::TvShows::RickAndMorty.quote,
     read: false
     )
 end
