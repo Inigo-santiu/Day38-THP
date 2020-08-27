@@ -1,0 +1,21 @@
+<h1>Emails#index</h1>
+<p>Find me in app/views/emails/index.html.erb</p>
+
+
+<%= link_to "Give me my email!", emails_create_path, class:" btn btn-primary"%>
+
+<div class="row">
+    <div id="object_mail" class="col-4">
+      <% @emails.each do|email| %>
+      
+      <h3>
+      <%= check_box_tag :read, true, email.read, data: { remote: true, url: email_path(email.id), method: "put" }%>
+      <%= link_to "#{email.object}", email_path(email.id), remote: true %>
+      </h3>
+        <% end %>
+    </div>
+    <div id="body_mail" class="col-8">
+      <% @emails.each do|email| %>
+        <% end %>
+    </div>
+</div>

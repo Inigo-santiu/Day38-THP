@@ -1,0 +1,14 @@
+<h1>Emails#new</h1>
+<p>Find me in app/views/emails/new.html.erb</p>
+
+<div class="form">
+  <%= form_tag(emails_path, method: :post, class: "form") do %>
+    <label for="object">'Title (object)'
+    <%= text_field_tag  :object %>
+
+    <label for="body">'body'
+    <%= text_field_tag  :body %>
+
+    <%= submit_tag 'create', :name => 'commit'%>
+  <% end %>
+</div>
